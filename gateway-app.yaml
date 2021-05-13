@@ -1,3 +1,14 @@
 server:
   port: 7000
 
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: socialmediaModule
+          uri: http://localhost:7100/
+          predicates:
+              - Path=/socialmedia/**
+          filters:
+              - RewritePath=/socialmedia(?<segment>/?.*), $\{segment}
+

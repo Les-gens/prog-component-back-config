@@ -1,0 +1,19 @@
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    jdbc-url: jdbc:mariadb://localhost:7701/socialmedia-db
+    username: socialmedia-user
+    password: socialmedia-pwd-01
+    driver-class-name: org.mariadb.jdbc.Driver
+
+datasource:
+  socialmedia:
+    jdbc-url: jdbc:mariadb://localhost:7701/lessons-db
+    username: socialmedia-user
+    password: socialmedia-pwd-01
+    liquibase:
+      change-log: classpath:/db/changelog/db.socialmedia.changelog-master.yaml
