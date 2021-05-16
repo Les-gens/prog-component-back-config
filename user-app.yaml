@@ -1,0 +1,13 @@
+server:
+  port: 7100
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  r2dbc: 
+    url: r2dbc:mariadb://localhost:7702/user-db
+    username: client-user
+    password: user-pwd-01
