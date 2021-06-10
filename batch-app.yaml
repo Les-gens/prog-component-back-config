@@ -12,6 +12,7 @@ spring:
       driver-class-name: org.mariadb.jdbc.Driver
       liquibase:
         change-log: classpath:/db/changelog/db.user.changelog-master.yaml
+ datasource:
     post:
       jdbcUrl: jdbc:mariadb://localhost:7701/post-db
       username: post-user
