@@ -1,10 +1,8 @@
----
-
 spring:
   config:
     activate:
       on-profile: local
-datasource:
+    datasource:
     user:
       jdbcUrl: jdbc:mariadb://localhost:7702/user-db
       username: client-user
@@ -12,11 +10,10 @@ datasource:
       driver-class-name: org.mariadb.jdbc.Driver
       liquibase:
         change-log: classpath:/db/changelog/db.user.changelog-master.yaml
- datasource:
     post:
-      jdbcUrl: jdbc:mariadb://localhost:7701/post-db
-      username: post-user
-      password: post-pwd-01
-      driver-class-name: org.mariadb.jdbc.Driver
-      liquibase:
-        change-log: classpath:/db/changelog/db.post.changelog-master.yaml
+        jdbcUrl: jdbc:mariadb://localhost:7701/post-db
+        username: post-user
+        password: post-pwd-01
+        driver-class-name: org.mariadb.jdbc.Driver
+        liquibase:
+            change-log: classpath:/db/changelog/db.post.changelog-master.yaml
