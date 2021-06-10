@@ -2,7 +2,7 @@ spring:
   config:
     activate:
       on-profile: local
-  datasource:
+datasource:
     user:
       jdbcUrl: jdbc:mariadb://localhost:7702/user-db
       username: client-user
